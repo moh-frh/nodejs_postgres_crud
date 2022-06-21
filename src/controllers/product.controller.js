@@ -12,7 +12,15 @@ exports.createProduct = async (req, res) => {
   res.status(201).send({
     message: "Product added successfully!",
     body: {
-      product: { product_name, quantity, price }
+      product: { product_name, quantity, price },
     },
   });
+};
+
+// ==> Method responsible for listing all 'Products':
+exports.listAllProducts = async (req, res) => {
+  const response = await db.query(
+    "SELECT * FROM products ORDER BY product_name ASC"
+  );
+  res.status(200).send(response.rows);
 };
