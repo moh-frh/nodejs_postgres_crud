@@ -8,9 +8,7 @@ exports.createProduct = async (req, res) => {
     "INSERT INTO products (product_name, quantity, price) VALUES ($1, $2, $3)",
     [product_name, quantity, price]
   );
-
-
-  karim 
+ 
   
   res.status(201).send({
     message: "Product added successfully!",
