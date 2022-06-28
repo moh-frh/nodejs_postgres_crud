@@ -9,6 +9,9 @@ exports.createProduct = async (req, res) => {
     [product_name, quantity, price]
   );
 
+
+  karim 
+  
   res.status(201).send({
     message: "Product added successfully!",
     body: {
